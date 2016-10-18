@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DataBird-JavaWeb:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="DataBird-JavaWeb.war">
+      <element id="artifact" artifact-name="DataBird-JavaWeb:war exploded" />
+    </root>
+  </artifact>
+</component>
