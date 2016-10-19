@@ -11,5 +11,5 @@
     <!--把主题配置为simple -->
     <constant name="struts.ui.theme" value="simple" />
     <include file="struts_jsp.xml"/>
-    <!--<include file="struts_json.xml"/>-->
+    <include file="struts_json.xml"/>
 </struts>

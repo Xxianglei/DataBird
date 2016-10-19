@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * Created by 言溪 on 2016/10/18.
+ * Created by 言溪 on 2016/10/19.
  */
 @Entity
 @Table(name="user",schema = "",catalog = "dataBird")

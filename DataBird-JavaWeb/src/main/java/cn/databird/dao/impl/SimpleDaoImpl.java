@@ -8,7 +8,7 @@ import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by 言溪 on 2016/10/18.
+ * Created by 言溪 on 2016/10/19.
  */
 @Component
 public class SimpleDaoImpl implements SimpleDao {
