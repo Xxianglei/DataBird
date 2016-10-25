@@ -16,3 +16,6 @@ hs_err_pid*
 
 # ignore idea
 .idea/*
+
+# ignore .iml file
+*.iml
