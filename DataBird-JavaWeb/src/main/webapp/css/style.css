@@ -6,10 +6,10 @@
 
 
 /*导航部分*/
-.nav { width: 80%; height:80px; border: 0px solid gray; margin-left: auto; margin-right: auto; background: url("../img/nav1.jpg") no-repeat 10px center; }
+.nav { width: 80%; height:80px; border: 0px solid gray; margin-left: auto; margin-right: auto; background: url("../img/login_logo.png") no-repeat 10px center; }
 .nav_left { float: left; margin: 25px 100px;}
 .nav_inf { list-style: none; display: inline-block; padding-left: 20px;}
-#nav_infStart {color: #2DA7E0; padding-right: 280px; margin-left: 0;}
+#nav_infStart {color: #2DA7E0; padding-right: 300px; margin-left: 0;}
 .nav_inf a { text-decoration: none; color: gray;}
 .nav_inf a:hover { color: #2DA7E0;}
 .nav_right { float: right; margin: 25px 0 5px; height: 48px; width: 200px; border: 0px solid gray; }
@@ -18,11 +18,11 @@
 
 
 /*中间内容部分*/
-.content {  width:99.9%; height:600px; border:0px solid gray; margin:0 auto; overflow: hidden; opacity: 0.8;
-            background: -webkit-linear-gradient(left,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); /* Safari 5.1 - 6.0 */
-            background: -o-linear-gradient(right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); /* Opera 11.1 - 12.0 */
-            background: -moz-linear-gradient(right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); /* Firefox 3.6 - 15 */
-            background: linear-gradient(to right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); /* 标准 */
+.content {  width:99.9%; height:650px; border:0px solid gray; margin:0 auto; overflow: hidden; opacity: 0.8; background: url("../img/login_main.png");
+            /*background: -webkit-linear-gradient(left,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* Safari 5.1 - 6.0 *!
+            background: -o-linear-gradient(right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* Opera 11.1 - 12.0 *!
+            background: -moz-linear-gradient(right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* Firefox 3.6 - 15 *!
+            background: linear-gradient(to right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* 标准 *!*/
  }
 .content_left { background: url("../img") no-repeat; width: 60%; height: 500px; margin:40px 0; float: left;}
 .content_left .p1 { font-size: 60px; font-weight: bold;text-align: center; padding-top:100px; color: #fffffb;}
