@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>数据库实验室官方网站</title>
-    <script type="text/javascript" src="../js/style.js"></script>
+    <title>注册账号</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"/>
+    <script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/style.css" type="text/css"/>
-    <script type="text/javascript" src="../js/jquery-3.1.0.js"></script>                <!--jQuery-->
-    <script type="text/javascript" src="../js/jquery.validate.min.js"></script>        <!--jQuery校验插件-->
 </head>
 <body>
     <div class="top">
@@ -27,18 +27,15 @@
         </div>
     </div>
 
-    <div class="content">
-        <div class="content_left">
-            <p class="p1">DataBase</p>
-            <p class="p2">welcome to join us</p>
-        </div>
-        <div class="content_right">
-            <form action="#" method="post" id="loginForm">
-                <input type="text" id="username" class="username" placeholder="请输入用户名" onclick="usernameShadow()"/><br/><br/>
-                <input type="password" id="password" class="password" placeholder="请输入密码" onclick="passwordShadow()"/><br/><br/>
-                <input type="submit" class="submit" value="登　　录"/>
+    <div class="register_cont">
+            <form role="form">
+                <div class="form-group">
+                    <label for="name">名称</label>
+                    <input type="text" class="form-control" id="name" placeholder="请输入名称">
+                </div>
+
+                <button type="submit" class="btn btn-default">提交</button>
             </form>
-        </div>
     </div>
 
     <div class="footer">
