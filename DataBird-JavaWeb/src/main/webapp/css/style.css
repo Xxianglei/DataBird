@@ -40,13 +40,16 @@
 
 
 /*注册中间内容部分*/
-.register_cont { width:50%; height: 650px; border: 0px solid gray; margin: auto;}
+.register_cont { width:100%; height: 600px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
+.register_cont_Top { margin-left: 462px;}
+.register_cont_Top h4 { margin-bottom: 30px; }
+.register_cont_Bottom { width:20%; margin: 50px 0 50px 462px; }
+.register_cont_Bottom .input-group-addon {top: 0;}
 
 
 
 /*底部内容*/
 .footer .p3 { font-size: 15px; font-weight: 100;text-align: center; margin: 35px auto;}
-
 
 
 
