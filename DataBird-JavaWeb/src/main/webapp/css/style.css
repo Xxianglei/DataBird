@@ -32,6 +32,10 @@
 .content .username { width:270px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size:15px; padding-left: 10px;}
 .content .password { width: 270px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size: 15px; padding-left: 10px;}
 .content .submit { width: 285px; height: 40px; border-radius: 4px; border: 0px solid gray; cursor: pointer; background-color:#2DA7E0; color: #fffffb; font-size: 15px; }
+#remember_pad { font-size: 15px;}
+#forget_pad { font-size: 15px; text-decoration: none; color: #000000; margin-left: 120px; }
+#forget_pad:hover { color: #fffffb;}
+.submit { margin-top:10px; }
 
 
 
@@ -45,4 +49,6 @@
 
 
 
-input .error { color:red;}
+
+/*校验信息字体*/
+.error{ color:#CD0000; padding-left:10px; font-size: 15px;}
