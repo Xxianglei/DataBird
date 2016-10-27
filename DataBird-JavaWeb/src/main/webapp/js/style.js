@@ -13,6 +13,7 @@ function usernameShadow() {
     password.style.boxShadow = null;
 }
 
+
 /*改变密码框输入颜色*/
 function passwordShadow(){
     var username = document.getElementById("username");
@@ -22,3 +23,5 @@ function passwordShadow(){
     password.style.borderColor = "#2DA7E0";
     password.style.boxShadow = "0 0 8px #2DA7E0";
 }
+
+
