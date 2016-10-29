@@ -25,9 +25,11 @@ dbroom1411DB
 
 ###MySQL Root 密码
 > 不要轻易使用这个,dbworker 用户已经有databird数据库的所有操作权限了，mysql数据库整崩了自己重装。
+
 ```shell
 dbroom1411DB+
 ```
+
 ###MySQL dbworker 密码
 ```shell
 dbroom1411DB-
