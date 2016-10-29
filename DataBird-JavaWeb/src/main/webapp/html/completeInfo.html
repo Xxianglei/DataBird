@@ -75,9 +75,9 @@
                 </label>
             </div>
             <br>
-            <div class="input-group" id="birthday">
+            <div class="input-group" id="birthday">                                                  <!--选择出生年月-->
                 <span class="input-group-addon glyphicon glyphicon-gift"></span>
-                <div>
+                <div class="select_birthday">
                     <select class="form-control">
                         <option>1</option>
                         <option>2</option>
@@ -87,41 +87,101 @@
                     </select>
                     <label>&nbsp&nbsp年</label>
                 </div>
+                <div class="select_birthday">
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <label>&nbsp&nbsp月</label>
+                </div>
+                <div class="select_birthday">
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <label>&nbsp&nbsp日</label>
+                </div>
+            </div>
+            <br>
+            <div class="input-group" id="grade">                                                          <!--选择年届-->
+                <span class="input-group-addon glyphicon glyphicon-stats"></span>
                 <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option>2013&nbsp届&nbsp&nbsp大四</option>
+                    <option>2014&nbsp届&nbsp&nbsp大三</option>
+                    <option>2015&nbsp届&nbsp&nbsp大二</option>
+                    <option>2016&nbsp届&nbsp&nbsp大一</option>
                 </select>
-                <label>月</label>
-                <!--<select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-fullscreen"></span>
+                <select class="form-control">
+                    <option>ACM实验室</option>
+                    <option>经纬实验室</option>
+                    <option>嵌入式实验室</option>
+                    <option>数据库实验室</option>
+                    <option>综合实验室</option>
                 </select>
-                <label>日</label>-->
             </div>
             <br>
             <div class="input-group">
-                <span class="input-group-addon glyphicon glyphicon-asterisk"></span>
-                <input type="text" class="form-control" placeholder="真实姓名">
+                <span class="input-group-addon glyphicon glyphicon-move"></span>
+                <select class="form-control">
+                    <option>Android</option>
+                    <option>Javaweb</option>
+                    <option>前端</option>
+                </select>
             </div>
             <br>
-            <div class="input-group">
-                <span class="input-group-addon glyphicon glyphicon-envelope"></span>
-                <input type="text" class="form-control" placeholder="邮箱">
+            <div class="input-group" id="select_native">                                                  <!--选择籍贯-->
+                <span class="input-group-addon glyphicon glyphicon-edit"></span>
+                <div class="select_native">
+                    <select class="form-control">
+                        <option>吉林</option>
+                        <option>福建</option>
+                    </select>
+                    <label>&nbsp&nbsp省</label>
+                </div>
+                <div class="select_native">
+                    <select class="form-control">
+                        <option>吉林</option>
+                    </select>
+                    <label>&nbsp&nbsp市&nbsp&nbsp<span style="color: red;">(&nbsp籍贯必填&nbsp)</span></label>
+                </div>
             </div>
             <br>
-            <div class="input-group">
-                <span class="input-group-addon glyphicon glyphicon-lock"></span>
-                <input type="text" class="form-control" placeholder="密码">
+            <div class="input-group" id="select_company">                                            <!--选择工作地点-->
+                <span class="input-group-addon glyphicon glyphicon-copyright-mark"></span>
+                <div class="select_company">
+                    <select class="form-control">
+                        <option></option>
+                        <option>吉林</option>
+                        <option>福建</option>
+                    </select>
+                    <label>&nbsp&nbsp省</label>
+                </div>
+                <div class="select_cpmpany">
+                    <select class="form-control">
+                        <option></option>
+                        <option>吉林</option>
+                    </select>
+                    <label>&nbsp&nbsp市&nbsp&nbsp<span style="color: red;">(&nbsp工作地点选填&nbsp)</span></label>
+                </div>
             </div>
             <br>
+            <div class="input-group">                                                                   <!--输入公司名-->
+                <span class="input-group-addon glyphicon glyphicon-subtitles"></span>
+                <input type="text" class="form-control" placeholder="公司名称">
+            </div>
+            <br><br>
             <div class="input-group">
-                <input  class="btn btn-success" type="submit" value="创建账号" style="width:150px;"/>
+                <input  class="btn btn-success" type="submit" value="完成注册" style="width:150px;"/>
             </div>
         </form>
     </div>
