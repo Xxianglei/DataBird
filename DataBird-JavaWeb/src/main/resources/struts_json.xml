@@ -4,8 +4,8 @@
 
 <struts>
 
-    <package name="default" namespace="/"  extends="json-default"><!--需要将struts-default改为-->
-        <action name="login" class="cn.databird.action.SimpleAction" method="addUserTest">
+    <package name="json" namespace="/"  extends="json-default"><!--需要将struts-default改为-->
+        <action name="loginTest" class="cn.databird.action.LoginAction" method="login">
             <result type="json"/>
         </action>
     </package>
