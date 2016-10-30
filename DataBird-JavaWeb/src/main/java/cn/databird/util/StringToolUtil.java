@@ -1,11 +1,14 @@
 package cn.databird.util;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -159,11 +162,12 @@ public class StringToolUtil extends StringUtils {
      * 常用正则表达式：IP
      */
     public final static String regExp_ip = "\\d+\\.\\d+\\.\\d+\\.\\d+";
-//
-//    /**
-//     * 字符编码
-//     */
-//    public final static String encoding = BaseConfig.configProp.get(ConstantInit.config_encoding);
+
+    /**
+     * 字符编码
+     */
+
+   // public final static String encoding = BaseConfig.configProp.get(ConstantInit.config_encoding);
 
     /**
      * 验证字符串是否匹配指定正则表达式
@@ -190,38 +194,38 @@ public class StringToolUtil extends StringUtils {
         return myFormatter.format(doubleValue);
     }
 
-    /**
-     * Url Base64编码
-     *
-     * @param data 待编码数据
-     * @return String 编码数据
-     * @throws Exception
-     */
+//    /**
+//     * Url Base64编码
+//     *
+//     * @param data 待编码数据
+//     * @return String 编码数据
+//     * @throws Exception
+//     */
 //    public static String encode(String data) throws Exception {
 //        // 执行编码
 //        byte[] b = Base64.encodeBase64URLSafe(data.getBytes(encoding));
 //        return new String(b, encoding);
 //    }
 
-//    /**
-//     * Url Base64解码
-//     *
-//     * @param data 待解码数据
-//     * @return String 解码数据
-//     * @throws Exception
-//     */
+    /**
+     * Url Base64解码
+     *
+     * @param data 待解码数据
+     * @return String 解码数据
+     * @throws Exception
+     */
 //    public static String decode(String data) throws Exception {
 //        // 执行解码
 //        byte[] b = Base64.decodeBase64(data.getBytes(encoding));
 //        return new String(b, encoding);
 //    }
-//
-//    /**
-//     * URL编码（utf-8）
-//     *
-//     * @param source 目标字符串
-//     * @return String
-//     */
+
+    /**
+     * URL编码（utf-8）
+     *
+     * @param source 目标字符串
+     * @return String
+     */
 //    public static String urlEncode(String source) {
 //        String result = source;
 //        try {
@@ -349,12 +353,12 @@ public class StringToolUtil extends StringUtils {
         }
         return count;
     }
-//
-//    /**
-//     * 字符串转换为字节数组
-//     * @param str  字符串
-//     * @return byte[]
-//     */
+
+    /**
+     * 字符串转换为字节数组
+     * @param str  字符串
+     * @return byte[]
+     */
 //    public static byte[] getBytes(String str){
 //        if (str != null){
 //            try {
@@ -366,12 +370,12 @@ public class StringToolUtil extends StringUtils {
 //            return null;
 //        }
 //    }
-//
-//    /**
-//     * 字节数组转换为字符串
-//     * @param bytes 字节数组
-//     * @return String
-//     */
+
+    /**
+     * 字节数组转换为字符串
+     * @param bytes 字节数组
+     * @return String
+     */
 //    public static String toString(byte[] bytes){
 //        try {
 //            return new String(bytes, encoding);
@@ -421,12 +425,12 @@ public class StringToolUtil extends StringUtils {
         }
         return html.replaceAll("<([a-z]+?)\\s+?.*?>", "<$1>");
     }
-//
-//    /**
-//     * 替换为手机识别的HTML，去掉样式及属性，保留回车。
-//     * @param txt
-//     * @return
-//     */
+
+    /**
+     * 替换为手机识别的HTML，去掉样式及属性，保留回车。
+     * @param txt
+     * @return
+     */
 //    public static String toHtml(String txt){
 //        if (txt == null){
 //            return "";
@@ -445,20 +449,20 @@ public class StringToolUtil extends StringUtils {
         }
     }
 
-//    /**
-//     * 获得用户远程地址
-//     */
-//    public static String getRemoteAddr(HttpServletRequest request){
-//        String remoteAddr = request.getHeader("X-Real-IP");
-//        if (isNotBlank(remoteAddr)) {
-//            remoteAddr = request.getHeader("X-Forwarded-For");
-//        }else if (isNotBlank(remoteAddr)) {
-//            remoteAddr = request.getHeader("Proxy-Client-IP");
-//        }else if (isNotBlank(remoteAddr)) {
-//            remoteAddr = request.getHeader("WL-Proxy-Client-IP");
-//        }
-//        return remoteAddr != null ? remoteAddr : request.getRemoteAddr();
-//    }
+    /**
+     * 获得用户远程地址
+     */
+    public static String getRemoteAddr(HttpServletRequest request){
+        String remoteAddr = request.getHeader("X-Real-IP");
+        if (isNotBlank(remoteAddr)) {
+            remoteAddr = request.getHeader("X-Forwarded-For");
+        }else if (isNotBlank(remoteAddr)) {
+            remoteAddr = request.getHeader("Proxy-Client-IP");
+        }else if (isNotBlank(remoteAddr)) {
+            remoteAddr = request.getHeader("WL-Proxy-Client-IP");
+        }
+        return remoteAddr != null ? remoteAddr : request.getRemoteAddr();
+    }
 
     /**
      * 缩略字符串（不区分中英文字符）
