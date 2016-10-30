@@ -7,7 +7,7 @@
 
 
 /*导航部分*/
-.nav { width: 82%; height:80px; border: 0px solid gray; margin-left: auto; margin-right: auto; background: url("../img/login_logo.png") no-repeat 10px center; }
+.nav { width: 80%; height:80px; border: 0px solid gray; margin-left: auto; margin-right: auto; background: url("../img/login_logo.png") no-repeat 10px center; }
 .nav_left { float: left; margin: 25px 100px;}
 .nav_left ul { margin-left: -50px;}
 .nav_inf { list-style: none; display: inline-block; padding-left: 20px;}
@@ -30,11 +30,11 @@
 .content_left .p1 { font-size: 60px; font-weight: bold;text-align: center; padding-top:100px; color: #fffffb;}
 .content_left .p2 { font-size: 30px; font-weight: bold;text-align: center; padding-top:100px; color: #fffffb;}
 .content_right { width: 30%; height:500px; float:right; margin: 130px -10px;}
-.content .username { width:270px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size:15px; padding-left: 10px;}
-.content .password { width: 270px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size: 15px; padding-left: 10px;}
-.content .submit { width: 285px; height: 40px; border-radius: 4px; border: 0px solid gray; cursor: pointer; background-color:#2DA7E0; color: #fffffb; font-size: 15px; }
+.content .username { width:280px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size:15px; padding-left: 10px;}
+.content .password { width: 280px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size: 15px; padding-left: 10px;}
+.content .submit { width: 280px; height: 40px; border-radius: 4px; border: 0px solid gray; cursor: pointer; background-color:#2DA7E0; color: #fffffb; font-size: 15px; }
 #remember_pad { font-size: 15px;}
-#forget_pad { font-size: 15px; text-decoration: none; color: #000000; margin-left: 120px; }
+#forget_pad { font-size: 15px; text-decoration: none; color: #000000; margin-left: 130px; }
 #forget_pad:hover { color: #fffffb;}
 .submit { margin-top:10px; }
 
@@ -44,16 +44,20 @@
 .register_cont { width:100%; height: 600px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
 .register_cont_Top { margin-left: 462px;}
 .register_cont_Top h4 { margin-bottom: 30px; }
-.register_cont_Bottom { width:380px; margin: 50px 0 50px 462px; }
+.register_cont_Bottom { width:600px; margin: 80px 0 50px 462px; }
+.register_cont_Bottom #registerForm { width: 599px;}
+.register_cont_Bottom #registerForm .form-control { width: 340px;}
 .register_cont_Bottom .input-group-addon {top: 0;}
 
 
 
 /*完善个人信息内容部分*/
-.completeInfo_cont { width:100%; height: 1000px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
+.completeInfo_cont { width:100%; height: 1100px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
 .completeInfo_cont_Top { margin-left: 462px;}
 .completeInfo_cont_Top h4 { margin-bottom: 30px; }
-.completeInfo_cont_Bottom { width:40%; margin: 50px 0 50px 462px; }
+.completeInfo_cont_Bottom { width:40%; margin: 80px 0 50px 462px; }
+.completeInfo_cont_Bottom #infoForm .input-group { width: 599px;}
+/*.completeInfo_cont_Bottom #infoForm .input-group .form-control { width: 340px;}*/
 .completeInfo_cont_Bottom #upload_img { width: 500px;}
 .completeInfo_cont_Bottom #select_sex span { border-right:1px solid #cccccc; border-radius: 4px; }
 .completeInfo_cont_Bottom #select_sex label { padding: 6px 0 0 89px;}

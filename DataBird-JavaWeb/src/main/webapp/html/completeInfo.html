@@ -8,6 +8,12 @@
     <script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <script type="text/javascript" src="../js/validate.js"></script>
+    <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../js/messages_zh.js"></script>
+    <script type="text/javascript">
+
+    </script>
 </head>
 <body>
 <div class="top">
@@ -47,7 +53,7 @@
     </div>
 
     <div class="completeInfo_cont_Bottom">
-        <form role="form" name="form1">
+        <form role="form" name="form1" id="infoForm">
             <div class="input-group" id="upload_img">                                                     <!--上传头像-->
                 <img src="../img/login_logo.png"/>
                 <input type="file" name="inputfile" id="inputfile" style="display:none;" onChange="document.form1.path.value=this.value">
@@ -60,9 +66,14 @@
                 <p>您可以上传一个照片</p>
             </div>
             <br><br>
+            <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-asterisk"></span>                  <!--输入真实姓名-->
+                <input type="text" class="form-control" name="realName" placeholder="真实姓名" style="width: 340px;">
+            </div>
+            <br>
             <div class="input-group">                                                                   <!--输入手机号-->
                 <span class="input-group-addon glyphicon glyphicon-phone"></span>
-                <input type="text" class="form-control" placeholder="手机号">
+                <input type="text" class="form-control" name="phoneNum" placeholder="手机号" style="width: 340px;">
             </div>
             <br>
             <div class="input-group" id="select_sex">                                                     <!--选择性别-->
@@ -79,6 +90,7 @@
                 <span class="input-group-addon glyphicon glyphicon-gift"></span>
                 <div class="select_birthday">
                     <select class="form-control">
+                        <option></option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -89,6 +101,7 @@
                 </div>
                 <div class="select_birthday">
                     <select class="form-control">
+                        <option></option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -99,6 +112,7 @@
                 </div>
                 <div class="select_birthday">
                     <select class="form-control">
+                        <option></option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -111,7 +125,7 @@
             <br>
             <div class="input-group" id="grade">                                                          <!--选择年届-->
                 <span class="input-group-addon glyphicon glyphicon-stats"></span>
-                <select class="form-control">
+                <select class="form-control" style="width: 340px;">
                     <option>2013&nbsp届&nbsp&nbsp大四</option>
                     <option>2014&nbsp届&nbsp&nbsp大三</option>
                     <option>2015&nbsp届&nbsp&nbsp大二</option>
@@ -121,7 +135,7 @@
             <br>
             <div class="input-group">
                 <span class="input-group-addon glyphicon glyphicon-fullscreen"></span>
-                <select class="form-control">
+                <select class="form-control" style="width: 340px;">
                     <option>ACM实验室</option>
                     <option>经纬实验室</option>
                     <option>嵌入式实验室</option>
@@ -132,7 +146,7 @@
             <br>
             <div class="input-group">
                 <span class="input-group-addon glyphicon glyphicon-move"></span>
-                <select class="form-control">
+                <select class="form-control" style="width: 340px;">
                     <option>Android</option>
                     <option>Javaweb</option>
                     <option>前端</option>
@@ -177,9 +191,9 @@
             <br>
             <div class="input-group">                                                                   <!--输入公司名-->
                 <span class="input-group-addon glyphicon glyphicon-subtitles"></span>
-                <input type="text" class="form-control" placeholder="公司名称">
+                <input type="text" class="form-control" name="workCompany" placeholder="公司名称" style="width: 340px;">
             </div>
-            <br><br>
+            <br><br><br>
             <div class="input-group">
                 <input  class="btn btn-success" type="submit" value="完成注册" style="width:150px;"/>
             </div>
