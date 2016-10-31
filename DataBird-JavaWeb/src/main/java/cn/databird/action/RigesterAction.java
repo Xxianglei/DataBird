@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+
 /**
  * Created by 言溪 on 2016/10/24.
  */
@@ -23,4 +24,8 @@ public class RigesterAction extends ActionSupport {
         System.out.println("用于测试代码！！");
     }
 
+    public void simpleRegister() {
+
+        System.out.println("hello fix");
+    }
 }
