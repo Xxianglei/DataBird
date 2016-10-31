@@ -19,6 +19,7 @@ public class RigesterAction extends ActionSupport {
 
     @Autowired
     private RigersterService rigersterService;
+
     public void isExitUserName(){
         System.out.println("用于测试代码！！");
     }
