@@ -3,7 +3,7 @@ package cn.databird.util;
 /**
  * Created by 言溪 on 2016/10/26.
  */
-public class ConstantStr {
+public interface ConstantStr {
     //    -----------------------------------------------final string start-----------------------------------------------------
     // ------------------数字字符串----------------
     /**
