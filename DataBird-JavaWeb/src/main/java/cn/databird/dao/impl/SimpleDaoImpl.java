@@ -29,4 +29,5 @@ public class SimpleDaoImpl implements SimpleDao {
         System.out.println("恭喜您，添加成功！");
         LOGGER.info("info");
     }
+
 }

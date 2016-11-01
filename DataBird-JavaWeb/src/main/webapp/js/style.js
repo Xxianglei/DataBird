@@ -8,10 +8,11 @@ function usernameShadow() {
     var username = document.getElementById("username");
     var password = document.getElementById("password");
     username.style.borderColor = "#2DA7E0";
-    username.style.boxShadow = "0 0 5px #2DA7E0";
+    username.style.boxShadow = "0 0 8px #2DA7E0";
     password.style.borderColor = "gray";
     password.style.boxShadow = null;
 }
+
 
 /*改变密码框输入颜色*/
 function passwordShadow(){
@@ -20,5 +21,7 @@ function passwordShadow(){
     username.style.borderColor = "gray";
     username.style.boxShadow = null;
     password.style.borderColor = "#2DA7E0";
-    password.style.boxShadow = "0 0 5px #2DA7E0";
+    password.style.boxShadow = "0 0 8px #2DA7E0";
 }
+
+
