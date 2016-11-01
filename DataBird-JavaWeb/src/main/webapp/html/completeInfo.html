@@ -11,9 +11,8 @@
     <script type="text/javascript" src="../js/validate.js"></script>
     <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="../js/messages_zh.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" src="../js/util.js"></script>
 
-    </script>
 </head>
 <body>
 <div class="top">
@@ -68,12 +67,12 @@
             <br><br>
             <div class="input-group">
                 <span class="input-group-addon glyphicon glyphicon-asterisk"></span>                  <!--输入真实姓名-->
-                <input type="text" class="form-control" name="realName" placeholder="真实姓名" style="width: 340px;">
+                <input type="text" class="form-control" name="realName" placeholder="真实姓名&nbsp&nbsp&nbsp(2~4个汉字)" style="width: 340px;">
             </div>
             <br>
             <div class="input-group">                                                                   <!--输入手机号-->
                 <span class="input-group-addon glyphicon glyphicon-phone"></span>
-                <input type="text" class="form-control" name="phoneNum" placeholder="手机号" style="width: 340px;">
+                <input type="text" class="form-control" name="phoneNum" placeholder="手机号&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(合法手机号)" style="width: 340px;">
             </div>
             <br>
             <div class="input-group" id="select_sex">                                                     <!--选择性别-->
@@ -89,35 +88,20 @@
             <div class="input-group" id="birthday">                                                  <!--选择出生年月-->
                 <span class="input-group-addon glyphicon glyphicon-gift"></span>
                 <div class="select_birthday">
-                    <select class="form-control">
+                    <select class="form-control" id="year">
                         <option></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
                     </select>
                     <label>&nbsp&nbsp年</label>
                 </div>
                 <div class="select_birthday">
-                    <select class="form-control">
+                    <select class="form-control" id="month">
                         <option></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
                     </select>
                     <label>&nbsp&nbsp月</label>
                 </div>
                 <div class="select_birthday">
-                    <select class="form-control">
+                    <select class="form-control" id="day">
                         <option></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
                     </select>
                     <label>&nbsp&nbsp日</label>
                 </div>
@@ -156,42 +140,38 @@
             <div class="input-group" id="select_native">                                                  <!--选择籍贯-->
                 <span class="input-group-addon glyphicon glyphicon-edit"></span>
                 <div class="select_native">
-                    <select class="form-control">
-                        <option>吉林</option>
-                        <option>福建</option>
+                    <select class="form-control" id="pro" onchange="fillCity()">
+                        <option></option>
                     </select>
                     <label>&nbsp&nbsp省</label>
                 </div>
                 <div class="select_native">
-                    <select class="form-control">
-                        <option>吉林</option>
+                    <select class="form-control" id="city">
+                        <option></option>
                     </select>
-                    <label>&nbsp&nbsp市&nbsp&nbsp<span style="color: red;">(&nbsp籍贯必填&nbsp)</span></label>
+                    <label>&nbsp&nbsp市/区&nbsp&nbsp<span style="color: red;">(&nbsp籍贯必填&nbsp)</span></label>
                 </div>
             </div>
             <br>
             <div class="input-group" id="select_company">                                            <!--选择工作地点-->
                 <span class="input-group-addon glyphicon glyphicon-copyright-mark"></span>
                 <div class="select_company">
-                    <select class="form-control">
+                    <select class="form-control" id="workPro" onchange="fillWorkCity()">
                         <option></option>
-                        <option>吉林</option>
-                        <option>福建</option>
                     </select>
                     <label>&nbsp&nbsp省</label>
                 </div>
                 <div class="select_cpmpany">
-                    <select class="form-control">
+                    <select class="form-control" id="workCity">
                         <option></option>
-                        <option>吉林</option>
                     </select>
-                    <label>&nbsp&nbsp市&nbsp&nbsp<span style="color: red;">(&nbsp工作地点选填&nbsp)</span></label>
+                    <label>&nbsp&nbsp市/区&nbsp&nbsp<span style="color: red;">(&nbsp工作地点选填&nbsp)</span></label>
                 </div>
             </div>
             <br>
             <div class="input-group">                                                                   <!--输入公司名-->
                 <span class="input-group-addon glyphicon glyphicon-subtitles"></span>
-                <input type="text" class="form-control" name="workCompany" placeholder="公司名称" style="width: 340px;">
+                <input type="text" class="form-control" name="workCompany" placeholder="公司名称&nbsp&nbsp(选填,长度不超过20)" style="width: 340px;">
             </div>
             <br><br><br>
             <div class="input-group">
