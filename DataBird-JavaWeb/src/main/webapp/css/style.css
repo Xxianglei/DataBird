@@ -84,10 +84,16 @@
 
 /*忘记密码中间内容部分*/
 .forgetPwd_cont { width:100%; height: 600px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
-.forgetPwd_cont_left { border: 1px solid gray; width: 65%; height: 599px; float: left;}
-.forgetPwd_cont_left h1 { width: 300px; height: 70px; border: 1px solid gray;}
-.forgetPwd_cont_right { border: 1px solid gray; width: 29%; height: 599px; float: right;}
-.
+.forgetPwd_cont_left { border: 0px solid gray; width: 68%; height: 599px; float: left;}
+.forgetPwd_cont_left h1 { width: 50%; height: 60px; border-bottom: 2px solid gray; margin-left: 462px;}
+.forgetPwd_cont_left h4 { margin: 30px 0 0 462px; color: #2DA7E0; font-size: 14px;}
+.forgetPwd_cont_left form { width: 600px; margin-left: 462px; margin-top: 40px; }
+.forgetPwd_cont_left form .input-group-addon {top: 0;}
+.forgetPwd_cont_left form .form-control { width: 338px; }
+.forgetPwd_cont_right { border: 0px solid gray; width: 31%; height: 599px; float: right; margin-top: 90px;}
+.forgetPwd_cont_right h3 { margin-bottom: 20px;}
+.forgetPwd_cont_right ol { margin-left: 15px;}
+
 
 
 
