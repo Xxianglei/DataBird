@@ -51,7 +51,7 @@
 
 
 
-/*完善个人信息内容部分*/
+/*完善个人信息中间内容部分*/
 .completeInfo_cont { width:100%; height: 1100px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
 .completeInfo_cont_Top { margin-left: 462px;}
 .completeInfo_cont_Top h4 { margin-bottom: 30px; }
@@ -78,6 +78,17 @@
 .completeInfo_cont_Bottom .input-group img { float: left; border: 1px solid #cccccc; border-radius:4px; width: 150px; height: 150px;}
 .completeInfo_cont_Bottom .input-group button { margin: 30px 0 30px 100px;}
 .completeInfo_cont_Bottom .input-group p { margin-left: 250px; }
+
+
+
+
+/*忘记密码中间内容部分*/
+.forgetPwd_cont { width:100%; height: 600px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
+.forgetPwd_cont_left { border: 1px solid gray; width: 65%; height: 599px; float: left;}
+.forgetPwd_cont_left h1 { width: 300px; height: 70px; border: 1px solid gray;}
+.forgetPwd_cont_right { border: 1px solid gray; width: 29%; height: 599px; float: right;}
+.
+
 
 
 /*底部内容*/

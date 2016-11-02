@@ -17,9 +17,9 @@ $().ready(function () {
         return this.optional(element) || /^[A-Za-z]+$/.test(value);
     }, "匹配english");
 
-    $.validator.addMethod("isPwd", function(value, element) {                                               /*校验密码*/
-        return this.optional(element) || /^[a-zA-Z]\\w{6,16}$/.test(value);
-    }, "以字母开头，长度在6-16之间，只能包含字符、数字和下划线。");
+    $.validator.addMethod("stringCheck", function(value, element) {                                       /*校验密码*/
+        return this.optional(element) || /^[a-zA-Z0-9\u4e00-\u9fa5-_]+$/.test(value);
+    }, "只能包含中文、英文、数字、下划线等字符");
 
     $("#loginForm").validate({
         rules:{
@@ -33,7 +33,7 @@ $().ready(function () {
                 required:true,
                 minlength:6,
                 maxlength:16,
-                isPwd:true
+                stringCheck:true
             }
         },
         messages:{
@@ -47,7 +47,7 @@ $().ready(function () {
                 required:"请输入您的密码",
                 minlength:"至少由6位组成",
                 maxlength:"最多由16位组成",
-                isPwd:"只能包含字符,数字,下划线"
+                stringCheck:"只能包含字符,数字,下划线"
             }
         }
     });
@@ -69,9 +69,9 @@ $().ready(function () {
         return this.optional(element) || /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/.test(value);
     }, "验证合法邮箱。");
 
-    $.validator.addMethod("isPwd", function(value, element) {                                               /*校验密码*/
-        return this.optional(element) || /^[a-zA-Z]\\w{6,16}$/.test(value);
-    }, "以字母开头，长度在6-16之间，只能包含字符,数字,下划线。");
+    $.validator.addMethod("stringCheck", function(value, element) {                                         /*校验密码*/
+        return this.optional(element) || /^[a-zA-Z0-9\u4e00-\u9fa5-_]+$/.test(value);
+    }, "只能包含中文、英文、数字、下划线等字符");
 
 
     $("#registerForm").validate({
@@ -91,7 +91,7 @@ $().ready(function () {
                 required:true,
                 minlength:6,
                 maxlength:16,
-                isPwd:true
+                stringCheck:true
             },
             confirmPassword:{
                 required:true,
@@ -115,7 +115,7 @@ $().ready(function () {
                 required:"请输入您的密码",
                 minlength:"至少由6位组成",
                 maxlength:"最多由16位组成",
-                isPwd:"只能包含字符,数字,下划线"
+                stringCheck:"只能包含字符,数字,下划线"
             },
             confirmPassword:{
                 required:"请输入您的密码",
