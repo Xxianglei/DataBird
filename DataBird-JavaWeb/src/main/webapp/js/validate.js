@@ -18,7 +18,7 @@ $().ready(function () {
     }, "匹配english");
 
     $.validator.addMethod("stringCheck", function(value, element) {                                       /*校验密码*/
-        return this.optional(element) || /^[a-zA-Z0-9\u4e00-\u9fa5-_]+$/.test(value);
+        return this.optional(element) || /^.*[A-Za-z0-9\\w_-]+.*$/.test(value);
     }, "只能包含中文、英文、数字、下划线等字符");
 
     $("#loginForm").validate({
@@ -70,7 +70,7 @@ $().ready(function () {
     }, "验证合法邮箱。");
 
     $.validator.addMethod("stringCheck", function(value, element) {                                         /*校验密码*/
-        return this.optional(element) || /^[a-zA-Z0-9\u4e00-\u9fa5-_]+$/.test(value);
+        return this.optional(element) || /^.*[A-Za-z0-9\\w_-]+.*$/.test(value);
     }, "只能包含中文、英文、数字、下划线等字符");
 
 
@@ -218,7 +218,7 @@ $().ready(function () {
 $().ready(function () {
 
     $.validator.addMethod("stringCheck", function(value, element) {                                         /*校验密码*/
-        return this.optional(element) || /^[a-zA-Z0-9\u4e00-\u9fa5-_]+$/.test(value);
+        return this.optional(element) || /^.*[A-Za-z0-9\\w_-]+.*$/.test(value);
     }, "只能包含中文、英文、数字、下划线等字符");
 
 
