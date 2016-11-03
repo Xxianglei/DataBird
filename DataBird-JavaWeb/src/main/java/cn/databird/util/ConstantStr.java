@@ -238,4 +238,18 @@ public interface ConstantStr {
      * num 500
      */
     int num_500 = 500;
+
+    /**
+     * userName
+     */
+    String userName="userName";
+
+    /**
+     * password
+     */
+    String password="password";
+    /**
+     *  email
+     */
+    String email ="email";
 }

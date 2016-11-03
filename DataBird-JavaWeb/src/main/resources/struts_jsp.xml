@@ -5,8 +5,7 @@
 <struts>
 
     <package name="default" namespace="/"  extends="struts-default"><!--需要将struts-default改为-->
-        <action name="login" class="cn.databird.action.RigesterAction" method="findUsernameIsExit">
-            <result>/html/login.html</result>
+        <action name="login" class="cn.databird.action.LoginAction" method="login">
         </action>
     </package>
 </struts>
