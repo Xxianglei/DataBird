@@ -90,7 +90,7 @@
 .forgetPwd_cont_left form { width: 600px; margin-left: 462px; margin-top: 40px; }
 .forgetPwd_cont_left form .input-group-addon {top: 0;}
 .forgetPwd_cont_left form .form-control { width: 338px; }
-.forgetPwd_cont_right { border: 0px solid gray; width: 31%; height: 599px; float: right; margin-top: 90px;}
+.forgetPwd_cont_right { border: 0px solid gray; width: 23%; height: 599px; float: right; margin-top: 90px;}
 .forgetPwd_cont_right h3 { margin-bottom: 20px;}
 .forgetPwd_cont_right ol { margin-left: 15px;}
 
@@ -104,7 +104,7 @@
 .resetPwd_cont_left form { width: 600px; margin-left: 462px; margin-top: 40px; }
 .resetPwd_cont_left form .input-group-addon {top: 0;}
 .resetPwd_cont_left form .form-control { width: 338px; }
-.resetPwd_cont_right { border: 0px solid gray; width: 31%; height: 599px; float: right; margin-top: 90px;}
+.resetPwd_cont_right { border: 0px solid gray; width: 23%; height: 599px; float: right; margin-top: 90px;}
 .resetPwd_cont_right h3 { margin-bottom: 20px;}
 .resetPwd_cont_right ol { margin-left: 15px;}
 
