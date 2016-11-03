@@ -44,8 +44,8 @@ $().ready(function () {
                 isEnglish:"只能包含英文字母"
             },
             password:{
-                required:"请输入您的密码",
-                minlength:"至少由6位组成",
+                required:"请输入您的密码　",
+                minlength:"至少由6位组成　　",
                 maxlength:"最多由16位组成",
                 stringCheck:"只能包含字符,数字,下划线"
             }
