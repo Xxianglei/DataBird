@@ -14,7 +14,7 @@ public class User {
     private boolean sex;
     private String password;
     private String email;
-    private char phoneNum;
+    private String phoneNum;
     private String nativePlace;
     private String workPlace;
     private String workCompany;
@@ -68,7 +68,7 @@ public class User {
         this.startTime = startTime;
     }
     @Basic
-    @Column(name = "leaveTime",nullable = false)
+    @Column(name = "leaveTime")
     @Temporal(TemporalType.TIMESTAMP)
     public Date getLeaveTime() {
         return leaveTime;
@@ -113,15 +113,17 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
     @Basic
     @Column(name="phoneNum" ,length = 11)
-    public char getPhoneNum() {
+    public String getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(char phoneNum) {
+    public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
+
     @Basic
     @Column(name = "nativePlace" ,length = 20)
     public String getNativePlace() {
@@ -140,15 +142,7 @@ public class User {
     public void setWorkPlace(String workPlace) {
         this.workPlace = workPlace;
     }
-    @Basic
-    @Column(name = "workCompany" ,length = 20)
-    public String getWorkCompnay() {
-        return workCompany;
-    }
 
-    public void setWorkCompnay(String workCompnay) {
-        this.workCompany = workCompnay;
-    }
     @Basic
     @Column(name = "studyDir",length = 16)
     public String getStudyDir() {
@@ -205,12 +199,21 @@ public class User {
         this.star = star;
     }
     @Basic
-    @Column(name = "lab",length = 10)
-    public String getLabl() {
+    @Column(name = "workCompany" ,length = 20)
+    public String getWorkCompany() {
+        return workCompany;
+    }
+
+    public void setWorkCompany(String workCompany) {
+        this.workCompany = workCompany;
+    }
+    @Basic
+    @Column(name="lab",length = 10)
+    public String getLab() {
         return lab;
     }
 
-    public void setLabl(String labl) {
-        this.lab = labl;
+    public void setLab(String lab) {
+        this.lab = lab;
     }
 }

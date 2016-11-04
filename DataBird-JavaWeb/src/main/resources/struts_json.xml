@@ -5,7 +5,10 @@
 <struts>
 
     <package name="json" namespace="/"  extends="json-default"><!--需要将struts-default改为-->
-        <action name="loginTest" class="cn.databird.action.LoginAction" method="login">
+        <action name="loginTest" class="cn.databird.action.LoginAction" method="login2">
+            <result type="json"/>
+        </action>
+        <action name="getAllUserInfo" class="cn.databird.action.LoginAction" method="getAllUserInfo">
             <result type="json"/>
         </action>
     </package>

@@ -17,7 +17,13 @@ public class BaseDaoImpl implements BaseDao {
     }
 
     public <T> List<T> findAll(String sql) {
-        List<T> list=(List<T>) hibernateTemplate.find(sql);
+        List<T> list =null;
+        try{
+             list=(List<T>) hibernateTemplate.find(sql);
+        }catch (Exception e){
+            System.out.println("我出现错误了");
+            e.printStackTrace();
+        }
         return list;
     }
 

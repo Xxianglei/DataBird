@@ -248,10 +248,12 @@ public interface ConstantStr {
     /**
      * password
      */
+
     String password = "password";
 
     /**
      * email
      */
     String email = "email";
+
 }
