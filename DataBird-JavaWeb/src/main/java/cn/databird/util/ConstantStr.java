@@ -29,7 +29,7 @@ public interface ConstantStr {
     /**
      * 字符串101
      */
-    String str_one_hundred_one= "101";
+    String str_one_hundred_one = "101";
     /**
      * 字符串102
      */
@@ -242,14 +242,18 @@ public interface ConstantStr {
     /**
      * userName
      */
-    String userName="userName";
+
+    String userName = "userName";
 
     /**
      * password
      */
-    String password="password";
+
+    String password = "password";
+
     /**
-     *  email
+     * email
      */
-    String email ="email";
+    String email = "email";
+
 }

@@ -1,15 +1,17 @@
 
 
 /*预定义标准*/
-* { margin: 0; padding: 0;}
+* { margin: 0; padding: 0; }
+
 
 
 
 /*导航部分*/
-.nav { width: 80%; height:80px; border: 0px solid gray; margin-left: auto; margin-right: auto; background: url("../img/login_logo.png") no-repeat 10px center; }
+.nav { width: 81%; height:80px; border: 0px solid gray; margin-left: auto; margin-right: auto; background: url("../img/login_logo.png") no-repeat 10px center; }
 .nav_left { float: left; margin: 25px 100px;}
+.nav_left ul { margin-left: -50px;}
 .nav_inf { list-style: none; display: inline-block; padding-left: 20px;}
-#nav_infStart {color: #2DA7E0; padding-right: 300px; margin-left: 0;}
+.nav_infStart {color: #2DA7E0; padding-right: 300px; margin-left: 0;}
 .nav_inf a { text-decoration: none; color: gray;}
 .nav_inf a:hover { color: #2DA7E0;}
 .nav_right { float: right; margin: 25px 0 5px; height: 48px; width: 200px; border: 0px solid gray; }
@@ -17,7 +19,7 @@
 
 
 
-/*中间内容部分*/
+/*登录中间内容部分*/
 .content {  width:99.9%; height:650px; border:0px solid gray; margin:0 auto; overflow: hidden; opacity: 0.8; background: url("../img/login_main.png");
             /*background: -webkit-linear-gradient(left,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* Safari 5.1 - 6.0 *!
             background: -o-linear-gradient(right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* Opera 11.1 - 12.0 *!
@@ -28,11 +30,71 @@
 .content_left .p1 { font-size: 60px; font-weight: bold;text-align: center; padding-top:100px; color: #fffffb;}
 .content_left .p2 { font-size: 30px; font-weight: bold;text-align: center; padding-top:100px; color: #fffffb;}
 .content_right { width: 30%; height:500px; float:right; margin: 130px -10px;}
-.content .username { width:270px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size:15px; padding-left: 10px;}
-.content .password { width: 270px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size: 15px; padding-left: 10px;}
-.content .submit { width: 285px; height: 40px; border-radius: 4px; border: 0px solid gray; cursor: pointer; background-color:#2DA7E0; color: #fffffb; font-size: 15px; }
+.content .username { width:280px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size:15px; padding-left: 10px;}
+.content .password { width: 280px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size: 15px; padding-left: 10px;}
+.content .submit { width: 280px; height: 40px; border-radius: 4px; border: 0px solid gray; cursor: pointer; background-color:#2DA7E0; color: #fffffb; font-size: 15px; }
+#remember_pad { font-size: 15px;}
+#forget_pad { font-size: 15px; text-decoration: none; color: #000000; margin-left: 130px; }
+#forget_pad:hover { color: #fffffb;}
+.submit { margin-top:10px; }
+
+
+
+/*注册中间内容部分*/
+.register_cont { width:100%; height: 600px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
+.register_cont_Top { margin-left: 462px;}
+.register_cont_Top h4 { margin-bottom: 30px; }
+.register_cont_Bottom { width:600px; margin: 80px 0 50px 462px; }
+.register_cont_Bottom #registerForm { width: 599px;}
+.register_cont_Bottom #registerForm .form-control { width: 340px;}
+.register_cont_Bottom .input-group-addon {top: 0;}
+
+
+
+/*完善个人信息中间内容部分*/
+.completeInfo_cont { width:100%; height: 1100px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
+.completeInfo_cont_Top { margin-left: 462px;}
+.completeInfo_cont_Top h4 { margin-bottom: 30px; }
+.completeInfo_cont_Bottom { width:40%; margin: 80px 0 50px 462px; }
+.completeInfo_cont_Bottom #infoForm .input-group { width: 599px;}
+/*.completeInfo_cont_Bottom #infoForm .input-group .form-control { width: 340px;}*/
+.completeInfo_cont_Bottom #upload_img { width: 500px;}
+.completeInfo_cont_Bottom #select_sex span { border-right:1px solid #cccccc; border-radius: 4px; }
+.completeInfo_cont_Bottom #select_sex label { padding: 6px 0 0 89px;}
+.completeInfo_cont_Bottom #birthday select { width:80px; display: inline-block; margin-left: 11px; border-radius: 4px;}
+.completeInfo_cont_Bottom #birthday span { border-right:1px solid #cccccc; border-radius: 4px; }
+.completeInfo_cont_Bottom #birthday label { padding:7px 0; margin-bottom: 0;}
+.completeInfo_cont_Bottom #birthday .select_birthday { float: left;}
+.completeInfo_cont_Bottom #select_native select { width:80px; display: inline-block; margin-left: 11px; border-radius: 4px;}
+.completeInfo_cont_Bottom #select_native span { border-right:1px solid #cccccc; border-radius: 4px; }
+.completeInfo_cont_Bottom #select_native label { padding:7px 0; margin-bottom: 0;}
+.completeInfo_cont_Bottom #select_native .select_native { float: left;}
+.completeInfo_cont_Bottom #select_company select { width:80px; display: inline-block; margin-left: 11px; border-radius: 4px;}
+.completeInfo_cont_Bottom #select_company span { border-right:1px solid #cccccc; border-radius: 4px; }
+.completeInfo_cont_Bottom #select_company label { padding:7px 0; margin-bottom: 0;}
+.completeInfo_cont_Bottom #select_company .select_company { float: left;}
+.completeInfo_cont_Bottom .input-group-addon {top: 0;}
+.completeInfo_cont_Bottom .input-group { width: 380px;}
+.completeInfo_cont_Bottom .input-group img { float: left; border: 1px solid #cccccc; border-radius:4px; width: 150px; height: 150px;}
+.completeInfo_cont_Bottom .input-group button { margin: 30px 0 30px 100px;}
+.completeInfo_cont_Bottom .input-group p { margin-left: 250px; }
+
+
+
+
+/*忘记密码中间内容部分*/
+.forgetPwd_cont { width:100%; height: 600px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
+.forgetPwd_cont_left { border: 1px solid gray; width: 65%; height: 599px; float: left;}
+.forgetPwd_cont_left h1 { width: 300px; height: 70px; border: 1px solid gray;}
+.forgetPwd_cont_right { border: 1px solid gray; width: 29%; height: 599px; float: right;}
+.
 
 
 
 /*底部内容*/
 .footer .p3 { font-size: 15px; font-weight: 100;text-align: center; margin: 35px auto;}
+
+
+
+/*校验信息字体*/
+.error{ color:#CD0000; padding-left:10px; font-size: 15px;}

@@ -1,9 +1,15 @@
 package cn.databird.service.impl;
 
 import cn.databird.dao.RigersterDao;
+import cn.databird.model.User;
 import cn.databird.service.RigersterService;
+import cn.databird.util.CheckoutUtil;
+import cn.databird.util.ConstantStr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
+import java.util.Map;
 
 
 /**
@@ -11,7 +17,38 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class RigersterServiceImpl implements RigersterService {
+
     @Autowired
     private RigersterDao rigersterDao;
 
+    public void simpleRigerster(Map<String, String[]> paras) throws Exception {
+
+        String userName = ((String[]) (paras.get(ConstantStr.userName)))[0];
+        String password = ((String[]) (paras.get(ConstantStr.password)))[0];
+        String email = ((String[]) (paras.get(ConstantStr.email)))[0];
+
+        if (!CheckoutUtil.regExpVali(userName, CheckoutUtil.regExp_accountNumber)) {
+
+            return;
+        }
+
+        if (!CheckoutUtil.regExpVali(password, CheckoutUtil.regExp_password)) {
+
+            return;
+        }
+
+        if (!CheckoutUtil.regExpVali(email, CheckoutUtil.regExp_email)) {
+
+            return;
+        }
+
+        User user = new User();
+        user.setUserName(userName);
+        user.setPassword(password);
+        user.setEmail(email);
+        user.setSex(true);
+        user.setRealName("databird");
+
+        rigersterDao.simpleRigerster(user);
+    }
 }
