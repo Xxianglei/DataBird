@@ -15,28 +15,29 @@
 .nav_inf a { text-decoration: none; color: gray;}
 .nav_inf a:hover { color: #2DA7E0;}
 .nav_right { float: right; margin: 25px 0 5px; height: 48px; width: 200px; border: 0px solid gray; }
-.nav_right a { text-decoration: none; border: 0px solid gray; border-radius:4px; background-color:#2DA7E0; color: #fffffb; font-size: 15px; padding: 7px 20px; margin: 30px 10px; }
+.nav_right a { text-decoration: none; border: 0px solid gray; border-radius:4px; background-color:#2DA7E0; color: #fffffb; font-size: 15px; padding: 7px 20px; margin: 30px 10px;
+               transition: background-color 0.5s; -webkit-transition: background-color 0.5s; -moz-transition:background-color 0.5s; -ms-transition:background-color 0.5s; -o-transition:background-color 0.5s;}
+.nav_right a:hover { background-color: #1874CD; transition: background-color 0.5s; -webkit-transition: background-color 0.5s; -moz-transition:background-color 0.5s; -ms-transition:background-color 0.5s; -o-transition:background-color 0.5s;}
+
 
 
 
 /*登录中间内容部分*/
-.content {  width:99.9%; height:650px; border:0px solid gray; margin:0 auto; overflow: hidden; opacity: 0.8; background: url("../img/login_main.png");
-            /*background: -webkit-linear-gradient(left,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* Safari 5.1 - 6.0 *!
-            background: -o-linear-gradient(right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* Opera 11.1 - 12.0 *!
-            background: -moz-linear-gradient(right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* Firefox 3.6 - 15 *!
-            background: linear-gradient(to right,#2570a1,#33a3dc,#009ad6,#2DA7E0,#7bbfea,#90d7ec,#afdfe4,#f6f5ec,#fffef9,#fffffb); !* 标准 *!*/
- }
+.content {  width:99.9%; height:650px; border:0px solid gray; margin:0 auto; overflow: hidden; opacity: 0.8; background: url("../img/login_main.png"); background-size: cover;}
 .content_left { background: url("../img") no-repeat; width: 60%; height: 500px; margin:40px 0; float: left;}
 .content_left .p1 { font-size: 60px; font-weight: bold;text-align: center; padding-top:100px; color: #fffffb;}
 .content_left .p2 { font-size: 30px; font-weight: bold;text-align: center; padding-top:100px; color: #fffffb;}
 .content_right { width: 30%; height:500px; float:right; margin: 130px -10px;}
-.content .username { width:280px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size:15px; padding-left: 10px;}
-.content .password { width: 280px; height: 40px; border-radius: 4px; border: 1px solid gray; font-size: 15px; padding-left: 10px;}
-.content .submit { width: 280px; height: 40px; border-radius: 4px; border: 0px solid gray; cursor: pointer; background-color:#2DA7E0; color: #fffffb; font-size: 15px; }
+.content input[type="text"] { width:250px; font-size:15px; padding-left: 10px; position: relative; top: 1px;}
+.content input[type="password"] { width: 250px; font-size: 15px; padding-left: 10px; position: relative; top: 1px;}
+.content .submit { width: 288px; height: 40px; border-radius: 4px; border: 0px solid gray; cursor: pointer; background-color:#2DA7E0; color: #fffffb; font-size: 15px;
+                   transition: background-color 0.5s; -webkit-transition: background-color 0.5s; -moz-transition:background-color 0.5s; -ms-transition:background-color 0.5s; -o-transition:background-color 0.5s;}
+.content .submit:hover { background-color: #1874CD; transition: background-color 0.5s; -webkit-transition: background-color 0.5s; -moz-transition:background-color 0.5s; -ms-transition:background-color 0.5s; -o-transition:background-color 0.5s;}
 #remember_pad { font-size: 15px;}
-#forget_pad { font-size: 15px; text-decoration: none; color: #000000; margin-left: 130px; }
+#forget_pad { font-size: 15px; text-decoration: none; color: #000000; margin-left: 138px; }
 #forget_pad:hover { color: #fffffb;}
 .submit { margin-top:10px; }
+
 
 
 
@@ -57,7 +58,6 @@
 .completeInfo_cont_Top h4 { margin-bottom: 30px; }
 .completeInfo_cont_Bottom { width:40%; margin: 80px 0 50px 462px; }
 .completeInfo_cont_Bottom #infoForm .input-group { width: 599px;}
-/*.completeInfo_cont_Bottom #infoForm .input-group .form-control { width: 340px;}*/
 .completeInfo_cont_Bottom #upload_img { width: 500px;}
 .completeInfo_cont_Bottom #select_sex span { border-right:1px solid #cccccc; border-radius: 4px; }
 .completeInfo_cont_Bottom #select_sex label { padding: 6px 0 0 89px;}
@@ -84,10 +84,31 @@
 
 /*忘记密码中间内容部分*/
 .forgetPwd_cont { width:100%; height: 600px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
-.forgetPwd_cont_left { border: 1px solid gray; width: 65%; height: 599px; float: left;}
-.forgetPwd_cont_left h1 { width: 300px; height: 70px; border: 1px solid gray;}
-.forgetPwd_cont_right { border: 1px solid gray; width: 29%; height: 599px; float: right;}
-.
+.forgetPwd_cont_left { border: 0px solid gray; width: 68%; height: 599px; float: left;}
+.forgetPwd_cont_left h1 { width: 50%; height: 60px; border-bottom: 2px solid gray; margin-left: 462px;}
+.forgetPwd_cont_left h4 { margin: 30px 0 0 462px; color: #2DA7E0; font-size: 14px;}
+.forgetPwd_cont_left form { width: 600px; margin-left: 462px; margin-top: 40px; }
+.forgetPwd_cont_left form .input-group-addon {top: 0;}
+.forgetPwd_cont_left form .form-control { width: 338px; }
+.forgetPwd_cont_right { border: 0px solid gray; width: 23%; height: 599px; float: right; margin-top: 90px;}
+.forgetPwd_cont_right h3 { margin-bottom: 20px;}
+.forgetPwd_cont_right ol { margin-left: 15px;}
+
+
+
+/*重置密码中间内容部分*/
+.resetPwd_cont { width:100%; height: 600px; box-shadow: 0 0 5px gray; margin: auto; overflow: hidden;}
+.resetPwd_cont_left { border: 0px solid gray; width: 68%; height: 599px; float: left;}
+.resetPwd_cont_left h1 { width: 50%; height: 60px; border-bottom: 2px solid gray; margin-left: 462px;}
+.resetPwd_cont_left h4 { margin: 30px 0 0 462px; color: #2DA7E0; font-size: 14px;}
+.resetPwd_cont_left form { width: 600px; margin-left: 462px; margin-top: 40px; }
+.resetPwd_cont_left form .input-group-addon {top: 0;}
+.resetPwd_cont_left form .form-control { width: 338px; }
+.resetPwd_cont_right { border: 0px solid gray; width: 23%; height: 599px; float: right; margin-top: 90px;}
+.resetPwd_cont_right h3 { margin-bottom: 20px;}
+.resetPwd_cont_right ol { margin-left: 15px;}
+
+
 
 
 
@@ -96,5 +117,52 @@
 
 
 
+
+
 /*校验信息字体*/
 .error{ color:#CD0000; padding-left:10px; font-size: 15px;}
+
+
+
+
+/*@media响应式布局控制*/
+@media (max-width: 1500px){
+ .content_right { width:35%; }
+ .content_left { width: 64%; }
+ .nav_infStart { padding-right: 200px;}
+ .nav_right { margin: 25px 47px 0 5px;}
+}
+
+@media (max-width: 1300px) {
+ .content_right { width: 40%; }
+ .content_left { width: 60%; }
+ .nav_infStart { padding-right: 140px;}
+ .nav_left { margin: 25px 35px 25px 100px;}
+ .nav_right { margin: 25px 30px 0 5px;}
+}
+
+@media (max-width: 1130px) {
+ .nav_infStart { padding-right: 70px;}
+ .nav_right { margin: 25px -20px 0 5px;}
+}
+
+@media (max-width: 992px) {
+ .content_left { display: none;}
+ .content_right { width: 65%;}
+ .nav_infStart { padding-right: 10px;}
+}
+
+@media (max-width: 910px) {
+ .nav { width: 50%;}
+ .nav_left ul{ display: none;}
+}
+
+@media (max-width: 768px) {
+ .nav_left { display: none;}
+ .content_right { width: 75%;}
+}
+
+@media (max-width: 500px) {
+ .nav { width:80%;}
+ .content_right { width: 90%;}
+}

@@ -5,7 +5,11 @@
         <title>忘记密码</title>
         <link href="../css/style.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="../js/jquery-3.1.0.js"></script>
         <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/validate.js"></script>
+        <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="../js/messages_zh.js"></script>
     </head>
 
     <body>
@@ -31,9 +35,29 @@
             <div class="forgetPwd_cont_left">
                 <h1>忘记密码</h1>
                 <h4>请输入您注册的邮箱地址,我们将发送重置密码的链接到邮箱中</h4>
+                <form role="form" id="forgetPwdForm">
+                    <div class="input-group">                                                                 <!--输入邮箱-->
+                        <span class="input-group-addon glyphicon glyphicon-envelope"></span>
+                        <input type="email" class="form-control" name="email" placeholder="邮箱&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp(合法邮箱)">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon glyphicon glyphicon-barcode"></span>
+                        <input type="text" class="form-control" placeholder="验证码"/>
+                    </div>
+                    <br><br><br>
+                    <div class="input-group">
+                        <input  class="btn btn-success" type="submit" value="发送邮件" style="width:150px;"/>
+                    </div>
+                </form>
             </div>
             <div class="forgetPwd_cont_right">
-
+                <h3>收不到重置密码邮件？</h3>
+                <ol>
+                    <li>是否输入正确的邮箱地址(注册时使用的)</li>
+                    <li>可能被邮件系统当成垃圾邮件，检查垃圾箱</li>
+                    <li>可能是本站的邮件系统繁忙或者故障，请稍候再试或者联系管理员</li>
+                </ol>
             </div>
         </div>
 
