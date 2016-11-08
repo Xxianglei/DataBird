@@ -18,7 +18,7 @@ $().ready(function () {
     }, "匹配english");
 
     $.validator.addMethod("stringCheck", function(value, element) {                                       /*校验密码*/
-        return this.optional(element) || /^[a-zA-Z0-9\u4e00-\u9fa5-_]+$/.test(value);
+        return this.optional(element) || /^.*[A-Za-z0-9\\w_-]+.*$/.test(value);
     }, "只能包含中文、英文、数字、下划线等字符");
 
     $("#loginForm").validate({
@@ -26,7 +26,7 @@ $().ready(function () {
             username:{
                 required:true,
                 minlength:4,
-                maxlength:10,
+                maxlength:16,
                 isEnglish:true
             },
             password:{
@@ -40,12 +40,12 @@ $().ready(function () {
             username:{
                 required:"请输入您的用户名",
                 minlength:"至少由4个字母组成",
-                maxlength:"最多由10个字母组成",
+                maxlength:"最多由16个字母组成",
                 isEnglish:"只能包含英文字母"
             },
             password:{
-                required:"请输入您的密码",
-                minlength:"至少由6位组成",
+                required:"请输入您的密码　",
+                minlength:"至少由6位组成　　",
                 maxlength:"最多由16位组成",
                 stringCheck:"只能包含字符,数字,下划线"
             }
@@ -70,7 +70,7 @@ $().ready(function () {
     }, "验证合法邮箱。");
 
     $.validator.addMethod("stringCheck", function(value, element) {                                         /*校验密码*/
-        return this.optional(element) || /^[a-zA-Z0-9\u4e00-\u9fa5-_]+$/.test(value);
+        return this.optional(element) || /^.*[A-Za-z0-9\\w_-]+.*$/.test(value);
     }, "只能包含中文、英文、数字、下划线等字符");
 
 
@@ -79,7 +79,7 @@ $().ready(function () {
             username:{
                 required:true,
                 minlength:4,
-                maxlength:10,
+                maxlength:16,
                 isEnglish:true
             },
             email:{
@@ -104,7 +104,7 @@ $().ready(function () {
             username:{
                 required:"请输入您的用户名",
                 minlength:"至少由4个字母组成",
-                maxlength:"最多由10个字母组成",
+                maxlength:"最多由16个字母组成",
                 isEnglish:"只能包含英文字母"
             },
             email:{
@@ -176,6 +176,79 @@ $().ready(function () {
             workCompany:{
                 minlength:"选填",
                 maxlength:"最多由20个字符组成"
+            }
+        }
+    });
+});
+
+
+
+
+/*校验忘记密码*/
+$().ready(function () {
+
+    $.validator.addMethod("isEmail", function(value, element) {                                             /*校验邮箱*/
+        return this.optional(element) || /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/.test(value);
+    }, "验证合法邮箱。");
+
+
+    $("#forgetPwdForm").validate({
+        rules:{
+            email:{
+                required:true,
+                email:true,
+                isEmail:true
+            }
+        },
+        messages:{
+            email:{
+                required:"请输入有效的电子邮件地址",
+                isEmail:"请输入有效的电子邮件地址"
+            }
+        }
+    });
+});
+
+
+
+
+
+/*校验重置密码*/
+
+$().ready(function () {
+
+    $.validator.addMethod("stringCheck", function(value, element) {                                         /*校验密码*/
+        return this.optional(element) || /^.*[A-Za-z0-9\\w_-]+.*$/.test(value);
+    }, "只能包含中文、英文、数字、下划线等字符");
+
+
+    $("#resetPwdForm").validate({
+        rules:{
+            password:{
+                required:true,
+                minlength:6,
+                maxlength:16,
+                stringCheck:true
+            },
+            confirmPassword:{
+                required:true,
+                minlength:6,
+                maxlength:16,
+                equalTo:"#password"
+            }
+        },
+        messages:{
+            password:{
+                required:"请输入您的密码",
+                minlength:"至少由6位组成",
+                maxlength:"最多由16位组成",
+                stringCheck:"只能包含字符,数字,下划线"
+            },
+            confirmPassword:{
+                required:"请输入您的密码",
+                minlength:"至少由6位组成",
+                maxlength:"最多由16位组成",
+                equalTo:"二次密码输入不一致"
             }
         }
     });
