@@ -1,6 +1,6 @@
 package cn.databird.service.impl;
 
-import cn.databird.dao.LoginDao;
+import cn.databird.base.BaseDao;
 import cn.databird.service.LoginService;
 import cn.databird.util.*;
 import cn.databird.vo.UserInfo;
@@ -18,7 +18,7 @@ import java.util.Map;
 @Service
 public class LoginServiceImpl implements LoginService {
     @Autowired
-    private LoginDao loginDao;
+    private BaseDao loginDao;
 
     /**
      * @param map
@@ -39,7 +39,7 @@ public class LoginServiceImpl implements LoginService {
             return ConstantStr.str_one_hundred_one;
         }
 
-        password = Base64Util.decodeBase64String(password);
+        password = Base64Util.encodeBase64(password);
         /**
          * 判断是否email登录还是
          */

@@ -1,6 +1,6 @@
 package cn.databird.service.impl;
 
-import cn.databird.dao.RigersterDao;
+import cn.databird.base.BaseDao;
 import cn.databird.model.User;
 import cn.databird.service.RigersterService;
 import cn.databird.util.CheckoutUtil;
@@ -8,7 +8,6 @@ import cn.databird.util.ConstantStr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.Map;
 
 
@@ -19,7 +18,7 @@ import java.util.Map;
 public class RigersterServiceImpl implements RigersterService {
 
     @Autowired
-    private RigersterDao rigersterDao;
+    private BaseDao rigersterDao;
 
     public void simpleRigerster(Map<String, String[]> paras) throws Exception {
 
@@ -49,6 +48,6 @@ public class RigersterServiceImpl implements RigersterService {
         user.setSex(true);
         user.setRealName("databird");
 
-        rigersterDao.simpleRigerster(user);
+        rigersterDao.save(user);
     }
 }

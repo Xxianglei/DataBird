@@ -2,12 +2,14 @@ package cn.databird.base;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
  * Created by 言溪 on 2016/10/27.
  */
+@Component
 public class BaseDaoImpl implements BaseDao {
     @Autowired
     private HibernateTemplate hibernateTemplate;
